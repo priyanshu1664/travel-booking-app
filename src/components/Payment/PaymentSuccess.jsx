@@ -1,7 +1,14 @@
-import React from "react";
-import { Link } from "react-router";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router";
 
 function PaymentSuccess() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/payment");
+    }, 5000);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 ">
       <div className="bg-white shadow-xl rounded-3xl p-10 w-full max-w-md text-center">

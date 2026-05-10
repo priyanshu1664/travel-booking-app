@@ -1,11 +1,12 @@
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import React from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { db } from "../../firebase/firebaseConfig";
 import toast from "react-hot-toast";
 
 function Payment() {
+  const navigate = useNavigate();
   const { bookingId } = useParams();
   const { bookings } = useSelector((s) => s.booking);
   const { user } = useSelector((s) => s.user);
@@ -20,7 +21,7 @@ function Payment() {
     try {
       const options = {
         key: import.meta.env.VITE_RZP_TEST_KEY,
-        amount: booking.offerPrice.toFixed(2) * 100,
+        amount: Number(booking.offerPrice.toFixed(2)) * 100,
         currency: "INR",
         name: "TravelBooking",
         description: "Hotel Booking Payment",
@@ -44,6 +45,9 @@ function Payment() {
           });
 
           toast.success("Payment Successful!");
+          setTimeout(() => {
+            navigate("/payment-success");
+          }, 1000);
         },
 
         prefill: {
