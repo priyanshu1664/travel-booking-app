@@ -1,0 +1,261 @@
+.bookingCard {
+  display: flex;
+  gap: 24px;
+  width: 98%;
+  max-width: 1000px;
+  min-height: 350px;
+  padding: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.bookingCard:hover {
+  transform: translateY(-6px);
+}
+
+/* Light / Dark */
+
+.light {
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+  color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  background: linear-gradient(135deg, #18202a, #10161d);
+  color: #f5f5f5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* IMAGE */
+
+.imageWrapper {
+  width: 300px;
+  min-width: 300px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.hotelImage {
+  width: 98%;
+  height: 98%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+}
+
+/* LEFT INFO */
+
+.hotelInfoLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hotelTitleLight {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: -3px;
+}
+
+.hotelTitleDark {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #66d9ff;
+  margin-bottom: 6px;
+}
+
+.propertyType {
+  margin-left: 6px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.location {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.datesHead {
+  margin-top: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.dates {
+  margin-top: -5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* PRICING */
+
+.orignalPrice {
+  font-size: 1rem;
+  color: #ff4d4f;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.offerPrice {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00b894;
+  margin-top: -2px;
+}
+
+/* RIGHT SIDE */
+
+.hotelInfoRight {
+  margin-right: 15px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
+}
+
+.guests {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.totalPrice {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.grandPrice {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #20c997;
+}
+
+/* STATUS */
+
+.status {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+.status.accepted {
+  background: rgba(25, 135, 84, 0.15);
+  color: #198754;
+}
+
+.status.pending {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffb700d1;
+}
+
+.status.rejected {
+  background: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+/* BUTTONS */
+
+.actions {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.detailsBtn,
+.cancelBtn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detailsBtn {
+  background: linear-gradient(135deg, #0d6efd, #3f8cff);
+  color: white;
+}
+
+.cancelBtn {
+  background: linear-gradient(135deg, #dc3545, #ff5d6c);
+  color: white;
+}
+
+.detailsBtn:hover {
+  background: linear-gradient(135deg, #0b5ed7, #2f74e0);
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.35);
+}
+.detailsBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.detailsBtn:disabled:hover {
+  background-color: inherit;
+  transform: none;
+  box-shadow: none;
+}
+
+.cancelBtn:hover {
+  background: linear-gradient(135deg, #bb2d3b, #e0485a);
+  box-shadow: 0 8px 18px rgba(220, 53, 69, 0.35);
+}
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .bookingCard {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 90px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 250px;
+  }
+
+  .hotelInfoRight {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .totalContainer {
+    text-align: left;
+  }
+
+  .status {
+    align-self: flex-start;
+  }
+
+  .actions {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}

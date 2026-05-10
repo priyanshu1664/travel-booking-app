@@ -1,0 +1,74 @@
+.panelContainer {
+  margin-top: 1rem;
+  margin-bottom: -17px;
+  padding: 1rem;
+  border-bottom-right-radius: 15px;
+  background-color: #99ffff;
+}
+.panelContainer h5 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.dark {
+  color: white;
+  background-color: #009999;
+  border: 1px solid #99ffff;
+}
+.light {
+  color: black;
+  background-color: #99ffff;
+  border: 1px solid #99ffff;
+}
+.panelMenu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.panelMenuDown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin-bottom: 1rem;
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+.filterItemLight label {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
+
+.filterItemDark label {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+.filterInputLight,
+.filterItemLight select {
+  padding: 0.3rem 0.5rem;
+  width: 180px;
+  border: 2px solid #009999;
+  outline: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.filterInputDark,
+.filterItemDark select {
+  padding: 0.3rem 0.5rem;
+  width: 180px;
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}

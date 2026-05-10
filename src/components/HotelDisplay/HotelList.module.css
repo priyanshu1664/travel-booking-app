@@ -1,0 +1,82 @@
+.hotelContainer {
+  background-color: #eae2b7;
+}
+
+.hotelContainer h1 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.light {
+  background-color: #eae2b7;
+  color: #000;
+}
+
+.dark {
+  background-color: #9e8d2e;
+  color: #f1f1f1;
+}
+.pagination {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  min-width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* LIGHT MODE */
+
+.light .pageBtn {
+  font-size: 15px;
+  color: #0d3b66;
+  box-shadow: 0 3px 8px rgba(13, 59, 102, 0.09);
+}
+
+.light .pageBtn:hover {
+  background: #99beff;
+  padding: 5px 10px;
+  transform: translateY(-1px);
+}
+
+/* DARK MODE */
+
+.dark .pageBtn {
+  color: #f3f4f6;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+}
+
+.dark .pageBtn:hover {
+  background: #48556a;
+  padding: 5px 10px;
+  transform: translateY(-1px);
+}
+
+.activePage {
+  background: #669eff;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+.dark .activePage {
+  background: #374151;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.pageBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

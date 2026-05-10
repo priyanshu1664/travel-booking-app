@@ -1,0 +1,313 @@
+.hotelCard {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 16px;
+  transition: transform 0.2s ease;
+}
+.hotelCard:hover {
+  transform: translateY(-4px);
+}
+.light {
+  background: #ffffff;
+  color: #222;
+}
+.dark {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
+
+.hotelImage {
+  margin-top: 10px;
+  width: 290px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.imageWrapper {
+  position: relative;
+  width: 290px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.4); /* transparent black bg */
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.rightArrow {
+  right: 10px;
+}
+.leftArrow {
+  left: 10px;
+}
+
+.favoriteIcon {
+  position: absolute;
+  top: 15px; /* distance from top of image/card */
+  right: 10px; /* distance from right edge */
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent bg */
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10; /* make sure it appears above image */
+}
+
+.favoriteIcon:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.hotelInfoLeft {
+  padding: 16px;
+  flex: 1;
+  text-decoration: none;
+}
+.hotelInfoRight {
+  gap: 3rem;
+  padding: 10px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.score p {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 15px !important;
+  align-items: end;
+}
+.score span {
+  font-weight: 400;
+  margin-left: 20px;
+  font-size: 14px !important;
+  align-items: end;
+}
+.ratingBoxLight {
+  background-color: black;
+  color: gold;
+  border-radius: 10px;
+  padding: 2px 12px !important;
+  padding-top: 11px !important;
+  min-height: 30px !important;
+  min-width: 30px !important;
+  font-size: 1.2rem !important;
+  align-items: end !important;
+}
+.ratingBoxDark {
+  background-color: #e6c300;
+  color: darkblue;
+  border-radius: 10px;
+  padding: 2px 12px !important;
+  padding-top: 11px !important;
+  min-height: 45px !important;
+  min-width: 4px !important;
+  font-size: 1.2rem !important;
+  align-items: end !important;
+}
+
+.hotelTitleLight {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #008080; /* teal */
+  margin: 0;
+}
+.hotelTitleDark {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: aquamarine; /* teal */
+  margin: 0;
+}
+
+.propertyType {
+  font-weight: 400;
+  margin-top: 3px;
+  margin-left: 5px;
+  margin-bottom: -2px;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.hotelLocationLight {
+  font-size: 0.9rem;
+  color: #1e1e1e;
+}
+.hotelLocationDark {
+  font-size: 0.9rem;
+  color: aquamarine;
+}
+
+.rating {
+  color: #ffb400; /* gold */
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.totalContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+.totalContainer span {
+  margin-bottom: 2px;
+}
+.orignalPrice {
+  font-weight: 500;
+  font-size: 16px;
+  color: red;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.offerPrice {
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 2px;
+}
+.grandPrice {
+  font-weight: 600;
+  font-size: 21px;
+  margin-bottom: 2px;
+}
+
+.bookBtn {
+  background: #008080;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bookBtn:hover {
+  background: #20b2aa;
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.35);
+}
+
+.bookBtn:disabled {
+  background: #008080;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.facilitiesLight {
+  background-color: white;
+  color: #20b2aa;
+  margin: 10px;
+  margin-top: 35px;
+  min-height: 120px;
+  font-size: 14.5px !important;
+  border-radius: 10px;
+  border: 3px solid #e6fff7;
+  padding: 10px;
+  box-shadow: -4px 0px 0px rgba(235, 255, 247, 0.6);
+}
+.facilitiesDark {
+  background-color: rgb(128, 128, 128);
+  color: white;
+  margin: 10px;
+  margin-top: 35px;
+  min-height: 120px;
+  font-size: 14.5px !important;
+  border-radius: 10px;
+  border: 3px solid #808080;
+  padding: 10px;
+  box-shadow: -4px 0px 0px rgb(128, 128, 128, 0.6);
+}
+
+.facilities p {
+  margin-bottom: 5px;
+
+  font-weight: 600;
+}
+
+.availableBadge {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: #20b2aa;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.notAvailableBadge {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+
+.heartBadge {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 9px 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}
+.heartBadge:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.notHeartBadge {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 9px 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+}

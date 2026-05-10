@@ -1,0 +1,26 @@
+.offer {
+  border-radius: 50px;
+  border: 5px solid #e69500;
+}
+
+.offer h6 {
+  font-size: 18px;
+}
+
+.offer p {
+  font-size: 14px;
+}
+
+.menu {
+  color: white !important;
+  font-weight: 400;
+}
+
+.showActive {
+  background-color: #fcf2cf !important;
+  color: black !important;
+  font-weight: 600 !important; /* bolden for active state */
+}
+.icon {
+  font-size: 13px !important;
+}

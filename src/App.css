@@ -1,0 +1,87 @@
+@import "tailwindcss";
+.main-layout {
+  min-height: 80vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  min-width: 600px;
+}
+
+.menuActive {
+  padding: 0.6rem 1.55rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: #124e87;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menuActive:hover {
+  background-color: #0f3f6b;
+  transform: scale(1.03);
+}
+
+/* Light & Dark Themes */
+.light {
+  background-color: #eae2b7;
+  color: #000;
+}
+
+.dark {
+  background-color: #9e8d2e;
+  color: #f1f1f1;
+}
+
+@media (max-width: 992px) {
+  .main-layout {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .content {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .menuActive {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    padding: 12px;
+  }
+
+  .menuActive {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-layout {
+    min-height: auto;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .menuActive {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.9rem;
+  }
+}

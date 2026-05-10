@@ -1,0 +1,20 @@
+.hotelContainer {
+  padding: 30px 40px;
+  background-color: #eae2b7;
+  border-radius: 10px;
+}
+
+.hotelContainer h2 {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.light {
+  background-color: #eae2b7;
+  color: #000;
+}
+
+.dark {
+  background-color: #9e8d2e;
+  color: #f1f1f1;
+}
