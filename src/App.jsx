@@ -146,6 +146,14 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route
+                path="/attraction"
+                element={
+                  <ProtectedRoute>
+                    <Attraction />
+                  </ProtectedRoute>
+                }
+              />
 
               <Route
                 path="/payment-success"

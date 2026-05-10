@@ -4,9 +4,17 @@ import { Link, useNavigate } from "react-router";
 function PaymentSuccess() {
   const navigate = useNavigate();
   useEffect(() => {
-    setTimeout(() => {
-      navigate("/payment");
-    }, 5000);
+    async function delay() {
+      try {
+        await new Promise((res) => setTimeout(res, 5000));
+
+        navigate("/payment");
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    delay();
   }, []);
 
   return (

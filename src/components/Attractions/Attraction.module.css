@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.destinationCard span {
+  position: absolute;
+  bottom: 25px;
+  left: 12px;
+  font-weight: 600;
+  font-size: 22px;
+  color: cornsilk !important;
+  z-index: 2; /* keep text above gradient */
+}
+
+.destinationCard {
+  position: relative;
+  min-height: 220px;
+  min-width: 290px;
+  max-width: 425px;
+  flex: 1 1 290px; /* responsive sizing */
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destinationCard:hover {
+  transform: scale(1.02); /* smooth zoom */
+}
+
+.destinationCard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  border-radius: 0 0 8px 8px;
+}
+
+.destinationContainer {
+  max-width: 1200px; /* makes layout responsive */
+  margin: 0 auto; /* center horizontally */
+  padding: 20px;
+}
+
+.featuresSection {
+  background-color: #fff; /* white background */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.heading {
+  color: #028a0f; /* green heading */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subHeading {
+  font-size: 1.25rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.featuresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  flex: 1 1 300px;
+  background-color: #f8f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.featureCard h3 {
+  color: #028a0f; /* green heading inside cards */
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.featureCard p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}

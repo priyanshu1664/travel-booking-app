@@ -31,6 +31,7 @@ function Payment() {
           console.log(response);
 
           await addDoc(collection(db, "payments"), {
+            adminId: booking.adminId,
             bookingId: booking.id,
             hotelName: booking.hotelName,
             amount: booking.offerPrice.toFixed(2) * 100,
