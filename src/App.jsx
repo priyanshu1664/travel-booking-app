@@ -21,6 +21,7 @@ import Payment from "./components/Payment/Payment";
 import PaymentSuccess from "./components/Payment/PaymentSuccess";
 import PaymentDetails from "./components/Payment/PaymentDetails";
 import PasswordForm from "./components/Profile/PasswordForm";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   const dispatch = useDispatch();
@@ -58,24 +59,102 @@ function App() {
           {token && <Sidebar />}
           <div className="content">
             <Routes>
-              <Route path="/" element={<HotelList />}></Route>
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <HotelList />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route path="/auth" element={<AuthForm />}></Route>
               <Route
                 path="/hotel-detail/:hotelId"
-                element={<HotelDetails />}
+                element={
+                  <ProtectedRoute>
+                    <HotelDetails />
+                  </ProtectedRoute>
+                }
               ></Route>
-              <Route path="/attractions" element={<Attraction />}></Route>
-              <Route path="/auth" element={<AuthForm />}></Route>
-              <Route path="/profile" element={<UserProfile />}></Route>
-              <Route path="/change-password" element={<PasswordForm />}></Route>
-              <Route path="/profile/update" element={<UpdateProfile />}></Route>
-              <Route path="/bookings" element={<BookingList />}></Route>
-              <Route path="/favorites" element={<FavoriteList />}></Route>
-              <Route path="/payment/:bookingId" element={<Payment />} />
-              <Route path="/payment" element={<PaymentDetails />} />
+              <Route
+                path="/attractions"
+                element={
+                  <ProtectedRoute>
+                    <Attraction />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <UserProfile />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/change-password"
+                element={
+                  <ProtectedRoute>
+                    <PasswordForm />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/profile/update"
+                element={
+                  <ProtectedRoute>
+                    <UpdateProfile />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/bookings"
+                element={
+                  <ProtectedRoute>
+                    <BookingList />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/favorites"
+                element={
+                  <ProtectedRoute>
+                    <FavoriteList />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/payment/:bookingId"
+                element={
+                  <ProtectedRoute>
+                    <Payment />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="/payment"
+                element={
+                  <ProtectedRoute>
+                    <PaymentDetails />
+                  </ProtectedRoute>
+                }
+              />
+
               <Route
                 path="/payment-success"
-                element={<PaymentSuccess />}
-              ></Route>
+                element={
+                  <ProtectedRoute>
+                    <PaymentSuccess />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
           </div>
         </div>
